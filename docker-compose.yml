@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  todo:
+    volumes:
+      - ./todo:/todo
+    ports:
+      - 3000:3000
+    tty: true
+    container_name: 'todo'
+    build:
+      context: ./
+      dockerfile: ./.docker/Dockerfile
